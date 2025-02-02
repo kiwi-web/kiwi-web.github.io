@@ -87,14 +87,14 @@ body {
 .left {
 	display: flex;
 	flex-direction: column;
-	width: 25%;
+	width: 20%;
 	vertical-align: top;
 	float: left;
 }
 
 .menu {
 	border: 1px solid #000;
-	display: block;
+	display: inline-block;
 	width: 100%;
 	vertical-align: top;
 	padding: 24px;
