@@ -8,7 +8,7 @@ body {
 
 .outer {
 	width: 1200px;
-	height: 900px;
+	height: 800px;
 	border: 1px solid #000;
 	padding: 6px;
 	background-image: url('1.png');
@@ -30,7 +30,7 @@ body {
 .top-wrapper {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 30%;
     margin-bottom: 6px;
 }
 
@@ -85,9 +85,10 @@ body {
 }
 
 .left {
-	display: inline-block;
+	display: flex;
+	width: 25%;
 	vertical-align: top;
-	width: 200px;
+	float: left;
 }
 
 .menu {
@@ -154,9 +155,10 @@ body {
 }
 
 .right {
-	width: 186px;
-	display: inline-block;
+	display: flex;
+	width: 25%;
 	vertical-align: top;
+	float: right;
 }
 
 .profile {
