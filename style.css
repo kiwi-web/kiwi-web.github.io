@@ -71,12 +71,12 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .marquee {
 	overflow: hidden;
-	display: flex;
+	display: inline-block;
 	line-height: 20px;
 }
 
@@ -88,6 +88,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 20%;
+	margin: 20px;
 	vertical-align: top;
 	float: left;
 }
