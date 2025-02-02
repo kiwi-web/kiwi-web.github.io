@@ -15,14 +15,21 @@ body {
 	margin: auto;
 }
 
+.topwrapper {
+    display: flex;
+    width: 100%; /* Ensure it takes up the full width of .outer */
+    height: auto;
+    margin-bottom: 6px;
+}
+
 .title {
-	border: 1px solid #000;
-	display: inline-block;
-	vertical-align: top;
-	width: 300px;
-	height: 200px;
-	margin-bottom: 6px;
-	background-image: url('2.png');
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: top;
+    width: 35%; /* Set width relative to .topwrapper */
+    height: 200px;
+    margin-right: 6px; /* Add some margin to separate title from banner */
+    background-image: url('2.png');
 }
 
 .site-title {
@@ -41,12 +48,10 @@ body {
     display: flex; 
     flex-direction: column; 
     align-items: flex-end; 
-    width: 60%; 
-    height: 28%;
-    padding-right: 20px; 
-
+    width: 60%; /* Set width relative to .topwrapper */
+    height: auto;
+    padding-right: 20px;
 }
-
 
 .banner {
     border: 1px solid #000;
