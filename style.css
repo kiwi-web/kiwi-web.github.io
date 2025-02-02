@@ -36,10 +36,10 @@ body {
 
 .title {
     border: 1px solid #000;
-    display: inline-block;
+    display: flex;
     vertical-align: top;
     width: 35%; 
-    height: 200px;
+    height: 100%;
     margin-right: 6px; 
     background-image: url('2.png');
 }
@@ -71,9 +71,8 @@ body {
     margin-top: 6px;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-right: 10px;
 }
 
 .marquee {
