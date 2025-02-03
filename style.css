@@ -7,14 +7,17 @@ body {
 }
 
 .outer {
-	width: 1200px;
-	height: 800px;
-	border: 1px solid #000;
-	padding: 6px;
-	background-image: url('1.png');
-	margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1200px;
+    height: auto; 
+    border: 1px solid #000;
+    padding: 6px;
+    background-image: url('1.png');
+    margin: auto;
 }
-
 .site-title {
 	font-family: 'Gloria Hallelujah', sans-serif;
 	font-size: 30px;
