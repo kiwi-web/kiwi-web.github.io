@@ -191,7 +191,7 @@ body {
 .avatar {
     border: 1px solid #000;
     width: 95%;
-    height: 95%;
+    height: 60%;
     margin-bottom: 12px;
     overflow: hidden;
     position: relative; /* Needed for absolute positioning of the image */
@@ -211,7 +211,7 @@ body {
 .likes {
 	border: 1px solid #000;
 	width: 100%;
-	height: auto;
+	height: 40%;
 	margin-bottom: 12px;
 	background-image: url('5.png')
 }
