@@ -8,6 +8,7 @@ body {
 
 .outer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; 
     align-items: flex-start; 
     width: 1200px;
@@ -84,6 +85,14 @@ body {
 
 .marquee span{
 	white-space: nowrap;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; 
+
 }
 
 .left {
