@@ -4,6 +4,8 @@ body {
 	font-size: 12px;
 	margin: 0;
 	padding: 6px;
+	justify-content: center;
+	align-items: center;
 }
 
 .outer {
