@@ -45,12 +45,9 @@
 			</div>
 			<div class="right">
 				<div class="profile">
-					<a href="https://tamanotchi.world/19425c">
 					<div class="avatar">
-						<img src="https://tamanotchi.world/i2/19425" alt="It's tamaNOTchi! Click to feed!" class="avatar-img">
 					</div>
 					</a>
-					<p>Feed my goober</p>
 				</div>
 				<div class="likes">
 					<table border="2" cellspacing="0" cellpadding="6">
@@ -72,28 +69,25 @@
 		</div>	
 	</div>
 	<script type="text/javascript">
-		function Marquee(selector, speed) {
-			const parentSelector = document.querySelector(selector);
-			const clone = parentSelector.innerHTML;
-			const firstElement = parentSelector.children[0];
-			let i = 0;
-			console.log(firstElement);
-			parentSelector.insertAdjacentHTML('beforeend', clone);
-			parentSelector.insertAdjacentHTML('beforeend', clone);
+	function Marquee(selector, speed) {
+	    const parentSelector = document.querySelector(selector);
+	    const clone = parentSelector.innerHTML;
+	    parentSelector.insertAdjacentHTML('beforeend', clone); 
 
-			setInterval(function () {
-				firstElement.style.marginLeft = `-${i}px`;
-				if (i > firstElement.clientWidth) {
-					i = 0;
-				}
-				i = i + speed;
-			}, 0);
+	    let i = 0;
+	    setInterval(function () {
+		parentSelector.style.transform = `translateX(-${i}px)`;
+		i += speed;
+
+		if (i > parentSelector.scrollWidth / 2) {
+		    i = 0;
 		}
+	    }, 20);
+	}
 
-	//after window is completed load
-	//1 class selector for marquee
-	//2 marquee speed 0.2
-	window.addEventListener('load', Marquee('.marquee', 0.1))
+	window.addEventListener('load', function () {
+	    Marquee('.marquee', 0.1);
+	});
 
 </script>
 </body>
