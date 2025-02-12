@@ -79,7 +79,7 @@
 	    function scroll() {
 		parent.style.transform = `translateX(-${i}px)`;
 		i += speed;
-		if (i >= parent.scrollWidth / 2) {
+		if (i >= parent.scrollWidth / 8) {
 		    i = 0;
 		}
 
@@ -90,7 +90,7 @@
 	}
 
 	window.addEventListener('load', function () {
-	    Marquee('.marquee', 0.2);
+	    Marquee('.marquee', 0.3);
 	});
 
 </script>
