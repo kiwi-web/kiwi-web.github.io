@@ -80,7 +80,7 @@
 
 			setInterval(function () {
 				parentSelector.style.transform = `translateX(-${i}px)`;
-				if (i > firstElement.clientWidth) {
+				if (i > firstElement.clientWidth / 3) {
 					i = 0;
 				}
 				i = i + speed;
