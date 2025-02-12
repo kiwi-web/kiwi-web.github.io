@@ -81,11 +81,6 @@ body {
 .marquee {
 	overflow: hidden;
 	display: flex;
-	line-height: 20px;
-	justify-content: center;
-}
-
-.marquee span{
 	white-space: nowrap;
 }
 
