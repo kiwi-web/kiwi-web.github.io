@@ -79,12 +79,12 @@
 			parentSelector.insertAdjacentHTML('beforeend', clone);
 
 			setInterval(function () {
-				firstElement.style.marginLeft = `-${i}px`;
+				parentSelector.style.transform = `translateX(-${i}px)`;
 				if (i > firstElement.clientWidth) {
 					i = 0;
 				}
 				i = i + speed;
-			}, 0);
+			}, 20);
 		}
 
 	//after window is completed load
