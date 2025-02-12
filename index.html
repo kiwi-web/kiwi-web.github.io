@@ -78,7 +78,7 @@
 			parentSelector.insertAdjacentHTML('beforeend', clone);
 			parentSelector.insertAdjacentHTML('beforeend', clone);
 
-		const totalWidth = parentSelector.scrollWidth / 3; 
+		const totalWidth = firstElement.clientWidth; 
 
 		    setInterval(function () {
 			parentSelector.style.transform = `translateX(-${i}px)`;
