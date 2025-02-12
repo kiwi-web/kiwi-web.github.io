@@ -72,24 +72,23 @@
 		function Marquee(selector, speed) {
 			const parentSelector = document.querySelector(selector);
 			const clone = parentSelector.innerHTML;
-			const firstElement = parentSelector.children[0];
+			parentSelector.insertAdjacentHTML('beforeend', clone); 
+
 			let i = 0;
-			console.log(firstElement);
-			parentSelector.insertAdjacentHTML('beforeend', clone);
-			parentSelector.insertAdjacentHTML('beforeend', clone);
+			const firstElement = parentSelector.children[0]; 
+			const totalWidth = firstElement.clientWidth; 
 
-		const totalWidth = firstElement.clientWidth; 
-
-		    setInterval(function () {
+			setInterval(function () {
 			parentSelector.style.transform = `translateX(-${i}px)`;
 
 			if (i >= totalWidth) {
-			    i = 0; 
-			} else {
-			    i += speed;
+				i = 0; 
 			}
-		    }, 16);
+			else {
+				i += speed;
+			}}, 16); 		
 		}
+
 
 		window.addEventListener('load', function () {
 		    Marquee('.marquee', 0.5); 
