@@ -78,19 +78,23 @@
 			parentSelector.insertAdjacentHTML('beforeend', clone);
 			parentSelector.insertAdjacentHTML('beforeend', clone);
 
-			setInterval(function () {
-				parentSelector.style.transform = `translateX(-${i}px)`;
-				if (i > firstElement.clientWidth / 3) {
-					i = 0;
-				}
-				i = i + speed;
-			}, 10);
+		const totalWidth = parentSelector.scrollWidth / 3; 
+
+		    setInterval(function () {
+			parentSelector.style.transform = `translateX(-${i}px)`;
+
+			if (i >= totalWidth) {
+			    i = 0; 
+			} else {
+			    i += speed;
+			}
+		    }, 16);
 		}
 
-	//after window is completed load
-	//1 class selector for marquee
-	//2 marquee speed 0.2
-	window.addEventListener('load', Marquee('.marquee', 0.2))
+		window.addEventListener('load', function () {
+		    Marquee('.marquee', 0.5); 
+		});
+
 
 </script>
 </body>
