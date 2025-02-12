@@ -71,19 +71,18 @@
 	<script type="text/javascript">
 	function Marquee(selector, speed) {
 	    const parentSelector = document.querySelector(selector);
-	    const firstElement = parentSelector.children[0]; 
-	    const clone = parentSelector.innerHTML;
+	    const content = parentSelector.innerHTML; 
+	    parentSelector.innerHTML = `<span>${content}</span><span>${content}</span>`; 
 
-	    parentSelector.insertAdjacentHTML('beforeend', clone); 
-
+	    const spans = parentSelector.querySelectorAll('span'); 
 	    let i = 0;
+
 	    setInterval(function () {
-		parentSelector.style.transform = `translateX(-${i}px)`;
-		if (i >= firstElement.clientWidth) {
+		i += speed;
+		if (i >= spans[0].offsetWidth) {
 		    i = 0; 
-		} else {
-		    i += speed;
 		}
+		parentSelector.style.transform = `translateX(-${i}px)`;
 	    }, 16); 
 	}
 
