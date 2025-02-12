@@ -80,8 +80,9 @@ body {
 
 .marquee {
 	overflow: hidden;
-	display: inline-block;
+	display: flex;
 	line-height: 20px;
+	justify-content: center;
 }
 
 .marquee span{
