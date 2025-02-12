@@ -69,32 +69,27 @@
 		</div>	
 	</div>
 	<script type="text/javascript">
-		function Marquee(selector, speed) {
-			const parentSelector = document.querySelector(selector);
-			const clone = parentSelector.innerHTML;
-			parentSelector.insertAdjacentHTML('beforeend', clone); 
+	function Marquee(selector, speed) {
+	    const parentSelector = document.querySelector(selector);
+	    const firstElement = parentSelector.children[0]; 
+	    const clone = parentSelector.innerHTML;
 
-			let i = 0;
-			const firstElement = parentSelector.children[0]; 
-			const totalWidth = firstElement.clientWidth; 
+	    parentSelector.insertAdjacentHTML('beforeend', clone); 
 
-			setInterval(function () {
-			parentSelector.style.transform = `translateX(-${i}px)`;
-
-			if (i >= totalWidth) {
-				i = 0; 
-			}
-			else {
-				i += speed;
-			}}, 16); 		
+	    let i = 0;
+	    setInterval(function () {
+		parentSelector.style.transform = `translateX(-${i}px)`;
+		if (i >= firstElement.clientWidth) {
+		    i = 0; 
+		} else {
+		    i += speed;
 		}
+	    }, 16); 
+	}
 
-
-		window.addEventListener('load', function () {
-		    Marquee('.marquee', 0.5); 
-		});
-
-
+	window.addEventListener('load', function () {
+	    Marquee('.marquee', 0.5);
+	});
 </script>
 </body>
 </html>
