@@ -73,13 +73,14 @@
 	    const parent = document.querySelector(selector);
 	    const content = parent.innerHTML;
 	    parent.innerHTML += content;
+	    parent.innerHTML += content;
 	    
 	    let i = 0;
 	    
 	    function scroll() {
 		parent.style.transform = `translateX(-${i}px)`;
 		i += speed;
-		if (i >= parent.scrollWidth / 8) {
+		if (i >= parent.scrollWidth / 2) {
 		    i = 0;
 		}
 
