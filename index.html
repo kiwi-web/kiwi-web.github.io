@@ -70,23 +70,27 @@
 	</div>
 	<script type="text/javascript">
 	function Marquee(selector, speed) {
-	    const parentSelector = document.querySelector(selector);
-	    const clone = parentSelector.innerHTML;
-	    parentSelector.insertAdjacentHTML('beforeend', clone); 
-
+	    const parent = document.querySelector(selector);
+	    const content = parent.innerHTML;
+	    parent.innerHTML += content;
+	    
 	    let i = 0;
-	    setInterval(function () {
-		parentSelector.style.transform = `translateX(-${i}px)`;
+	    
+	    function scroll() {
+		parent.style.transform = `translateX(-${i}px)`;
 		i += speed;
-
-		if (i > parentSelector.scrollWidth / 2) {
+		if (i >= parent.scrollWidth / 2) {
 		    i = 0;
 		}
-	    }, 20);
+
+		requestAnimationFrame(scroll);
+	    }
+
+	    scroll();
 	}
 
 	window.addEventListener('load', function () {
-	    Marquee('.marquee', 0.1);
+	    Marquee('.marquee', 0.2);
 	});
 
 </script>
