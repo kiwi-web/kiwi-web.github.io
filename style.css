@@ -104,7 +104,7 @@ body {
 	margin-top: 12px;
 }
 
-.friends a {
+.links a {
 	display: inline-block;
 	vertical-align: top;
 	box-sizing: border-box;
@@ -114,11 +114,11 @@ body {
 	padding: 3px;
 }
 
-.friends a:hover {
+.links a:hover {
 	text-decoration: underline;
 }
 
-.friends h2 {
+.links h2 {
 	font-size: 12px;
 	letter-spacing: 2px;
 	margin: 0;
