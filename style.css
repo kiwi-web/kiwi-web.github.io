@@ -8,12 +8,10 @@ body {
 }
 
 .outer {
-	width: 1200px;
-	height: 900px;
+	width: 900px;
+	height: 600px;
 	border: 1px solid #000;
 	padding: 6px;
-	background-image: url('1.png');
-	margin: auto;
 }
 
 .title {
