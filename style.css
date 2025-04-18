@@ -4,7 +4,7 @@ body {
 	font-size: 12px;
 	margin: 0;
 	padding: 6px;
-	background-image: url('graphics/SB091.png')
+	background-image: url('graphics/SB091.jpg')
 }
 
 .outer {
@@ -12,7 +12,7 @@ body {
 	height: 700px;
 	border: 1px solid #000;
 	padding: 6px;
-	background-image: url('graphics/SB059.png');
+	background-image: url('graphics/SB059.jpg');
 	margin: auto;
 }
 
