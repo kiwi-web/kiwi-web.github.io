@@ -23,7 +23,7 @@ body {
 	width: 300px;
 	height: 200px;
 	margin-bottom: 6px;
-	background-image: url(graphics/puters-window.png);
+	background-image: url('graphics/puters-window.png');
 }
 
 .site-title {
