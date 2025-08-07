@@ -1,254 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+/***
+
+THIS CODE HAS BEEN REVAMPED... AGAIN!
+
+IF YOU WANT THE ORIGINAL CSS, GO TO: 
+  https://eggramen.neocities.org/code/css/misc/fakewp_old/fakewp2.css
+
+IF YOU WANT THE v2 CSS (i.e. NOT THE ORIGINAL BUT NOT THE CURRENT WIP REVAMP), GO TO: 
+  https://eggramen.neocities.org/code/css/misc/fakewp_new/fakewp2_new.css
+
+***/
+
 body {
-	font-family: Verdana, sans-serif;
-	font-size: 12px;
-	margin: 0;
-	padding: 6px;
-	background-image: url('graphics/SB091.jpg')
+  background: #0c5a72;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.875em;
+  }
+  
+center {
+  text-align: center;
+  }
+  
+/*Contains everything*/
+.wrapper {
+  width: 1150px;
+  background: #12282f;
+  margin: 0 auto;
+  top: 0;
+  margin-top: -10px;
+  border-left: 0px solid #12282f;
+  border-right: 0px solid #12282f;  
+  margin-bottom: -10px;
+  }
+  
+/*Contains main and sidebar divs*/
+.wrapper-2 {
+  position: relative;
 }
-
-.outer {
-	width: 1200px;
-	height: 700px;
-	border: 1px solid #000;
-	padding: 6px;
-	background-image: url('graphics/SB059.jpg');
-	margin: auto;
-}
-
-.topwrapper{
-	width: 100%;
-	height: 20%;
-	display: flex;
-	flex-direction: row;
-}
-
+  
+/*Header and footer images*/
+.header, .footer {
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), url("/img/river.gif"); /*This is the image in the header and footer. Replace it with your own!*/
+  background-size:cover;
+  }
+  
+  
+.footer {
+  height: 50px;
+  }
+  
+.header img {
+  border-top: 0px;
+  }
+  
+  
+/*Big title at the top of the page.*/  
 .title {
-	border: 1px solid #000;
-	display: inline-block;
-	vertical-align: top;
-	width: 300px;
-	height: 200px;
-	margin-bottom: 6px;
-	background-image: url('graphics/puters-window.jpg');
-}
+  padding: 15px 10px 10px 20px;
+  }
+  
+/*Override default margins/padding for headings.*/
+.title h1, .title h2, .title h3 {
+  padding:0;
+  margin: 0;
+  }
 
-.site-title {
-	font-family: 'Gloria Hallelujah', sans-serif;
-	font-size: 30px;
-	text-align: center;
-	padding-top: 50px;
-	box-sizing: border-box;
-}
+/*Container for top row of links.*/
+.links {
+  padding: 5px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  }
+  
+/*Div style for individual links.*/
+.link {
+  text-align: center;
+  display: inline-block;
+  list-style-type: none;
+  float: none;
+  font-weight: bold;
+  font-size: 1.16em;
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 0px solid red;
+  }
+  
+.link a {
+  color: white;
+  text-decoration: none;
+  }
 
-.site-subtitle {
-	text-align: center;
-}
+/*These three classes are just for defining the boundaries and size of the main and sidebar columns. Most fancy styling goes in the 'box' class.*/
+.main, .sidebar-right {
+  display: inline-block;
+  }
+  
+.sidebar-left, .sidebar-right {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  }
 
-.banner-wrapper {
-	display: inline-block;
-	vertical-align: top;
-	width: 80%;
-	height: 100%;
-}
-
-.banner {
-	border: 1px solid #000;
-	display: inline-block;
-	vertical-align: top;
-	width: 100%;
-	height: 89%;
-	background-image: url('graphics/banner.png');
-	background-size: cover;
-	background-position: 20%;
-}
-
-.scroller {
-	border: 1px solid #000;
-	display: inline-block;
-	vertical-align: top;
-	width: 100%;
-	height: 11%;
-	background: #FFF;
-	margin-top: 6px;
-	overflow: hidden;
-}
-
-.marquee {
-	overflow: hidden;
-	display: flex;
-	line-height: 20px;
-}
-
-.marquee span{
-	white-space: nowrap;
-}
-
-.bottomwrapper{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-}
-
-.left {
-	display: inline-block;
-	vertical-align: top;
-	width: 13%;
-}
-
-.menu {
-	border: 1px solid #000;
-	display: inline-block;
-	vertical-align: top;
-	padding: 24px;
-	box-sizing: border-box;
-	background-image: url('graphics/cit60083.jpg');
-}
-
-.friends {
-	display: inline-block;
-	vertical-align: top;
-	padding: 24px;
-	box-sizing: border-box;
-	background: #000;
-	color: #FFF;
-	width: 200px;
-	margin-top: 12px;
-}
-
-.friends a {
-	display: inline-block;
-	vertical-align: top;
-	box-sizing: border-box;
-	background: #000;
-	color: #FFF;
-	text-decoration: none;
-	padding: 3px;
-}
-
-.friends a:hover {
-	text-decoration: underline;
-}
-
-.friends h2 {
-	font-size: 12px;
-	letter-spacing: 2px;
-	margin: 0;
-	padding: 0;
-	margin-bottom: 12px;
-	border-bottom: 2px dotted #FFF;
-}
-
-.small {
-	display: inline-block;
-	vertical-align: top;
-	box-sizing: border-box;
-}
-
+.sidebar-left {
+  margin-left: 10px;
+  }
+  
 .main {
-	border: 1px solid #000;
-	display: inline-block;
-	vertical-align: top;
-	width: 500px;
-	height: 490px;
-	background: #FFF;
-}
-
-.main iframe {
-	height: 100%;
-	width: 100%;
-}
-
-.right {
-	display: inline-block;
-	vertical-align: top;
-	width: 15%
-}
-
-.profile {
-	border: 1px solid #000;
-	width: 186px;
-	height: auto;
-	background: #FFF;
-	padding: 6px;
-	box-sizing: border-box;	
-}
-
-.avatar {
-	border: 1px solid #000;
-	width: 170px;
-	height: 170px;
-	margin-bottom: 12px;
-	background-image: url('avvy.png')
-}
-
-.likes {
-	border: 1px solid #000;
-	width: 170px;
-	height: 170px;
-	margin-bottom: 12px;
-	background-image: url('5.png')
-}
-
-.likes table {
-	background: #FFF;
-	margin: auto;
-	margin-top: 22px;
-}
-
-.likes th {
-	background: #000;
-	color: #FFF;
-	margin: auto;
-	margin-top: 22px;
-}
-
-.menu a {
-	border: 1px solid #FFF;
-	height: 32px;
-	line-height: 30px;
-	width: 100%;
-	display: inline-block;
-	color: inherit;
-	text-decoration: none;
-	background: #FFF;
-	text-align: center;
-	position: relative;
-	margin-bottom: 12px;
-}
-
-.menu a:before {
-	content: " ";
-	display: inline-block;
-	height: 30px;
-	width: 30px;
-	background: #000;
-	border: 2px solid #FFF;
-	position: absolute;
-	left: -1px;
-	top: -1px;
-}
-
-img {
-	max-width: 100%;
-}
-
-h1 {
-	background: #000;
-	color: #FFF;
-	margin: 0;
-	font-size: 13px;
-	font-weight: normal;
-	letter-spacing: 1px;
-	margin-top: -6px;
-}
-
-h2 {
-	font-size: 14px;
-	font-weight: 500;
-	border-top: 1px dashed #000;
-	border-bottom: 1px dashed #000;
-	font-size: 12px;
-	letter-spacing: 2px;
-	padding: 3px;
-}
+  margin-left: 220px;
+  width: 710px;
+  }
+  
+.sidebar-right {
+  margin-right: 10px;
+  margin-left: 10px;
+  }
+  
+/*Box used for individual sections in the sidebar, center column, etc.*/
+.box {  
+  padding: 5px 10px 0px 10px;
+  background: #e2dcc1;
+  color: #12282f;
+  border-top: 5px solid #187b9b;
+  border-bottom: 5px solid #187b9b;
+  margin: 10px 0px 15px 0px;
+  }
+  
+/*Prevent overflow of large images in main text areas.*/
+.box img {
+  max-width: 100%;
+  height: auto;
+  }
+  
+/***
+  Not give any style rules by default. Move the padding from the 'box' class here if you want boxes with specially styled headers or images that 
+  don't follow the margins of the main text. (For an example of that: see skin #1.)
+  ***/
+.inner {
+  
+  }
+  
+/* For narrow screens. Makes the sidebars narrower, and makes width of the 
+ * center/main div 50% of the viewport width.
+ */
+@media(max-width:1180px) {
+  .wrapper {
+    width: calc(440px + 50vw);
+    }
+  .main {
+    width: 50vw;
+    }
+  }
+  
+@media(max-width:910px) {
+  .wrapper {
+    width: calc(360px + 52vw);
+    }
+  .sidebar-left, .sidebar-right {
+    width: 160px;
+    }
+  .main {
+    margin-left: 180px;
+    width: 52vw;
+    }
+  }
+  
+/* Mobile compatibility. Puts everything into a standard vertical layout. */
+@media(orientation:portrait) {
+  .wrapper {
+    width: 96vw;
+    margin: 0 auto;
+    padding:0;
+    position: relative;
+    }
+  .wrapper-2 {
+    width: 94vw;
+    margin: 0 auto;
+    padding:0;
+    position: relative;
+    }
+  .sidebar-left, .main, .sidebar-right {
+    position: relative;
+    width: 92vw;
+    margin: 0.25rem 1vw;
+    }
+  .sidebar-left, .sidebar-right {
+    font-size: 0.95em;
+    }
+  }
