@@ -42,7 +42,7 @@ center {
 .header, .footer {
   height: 200px;
   overflow: hidden;
-  background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), url("/img/river.gif"); /*This is the image in the header and footer. Replace it with your own!*/
+  background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), url("graphics/banner.png"); /*This is the image in the header and footer. Replace it with your own!*/
   background-size:cover;
   }
   
